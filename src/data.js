@@ -1,23 +1,22 @@
 // Mock Product Data Generator
 const generateProducts = () => {
-  const brasImages = Array.from({ length: 26 }, (_, i) => {
-    const id = i + 1;
-    // Special case for bra-1 which has no extension in the directory listing
-    return id === 1 ? '/bras/bra-1' : `/bras/bra-${id}.jpg`;
-  });
+  const brasImages = [
+    '/bras/bra-13.jpg', '/bras/bra-14.jpg', '/bras/bra-19.jpg',
+    '/bras/bra-21.jpg', '/bras/bra-22.jpg', '/bras/bra-23.jpg', '/bras/bra-24.jpg',
+    '/bras/bra-25.jpg', '/bras/bra-26.jpg'
+  ];
 
-  const tightsImages = Array.from({ length: 28 }, (_, i) => {
-    const id = i + 1;
-    // tight-1 and tight-4 have no extensions
-    if (id === 1 || id === 4) return `/compression-tights/tight-${id}`;
-    return `/compression-tights/tight-${id}.jpg`;
-  });
+  const tightsImages = [
+    '/compression-tights/tight 1.jpg', '/compression-tights/tight 3.jpg',
+    '/compression-tights/tight 4.jpg', '/compression-tights/tight 6.jpg',
+    '/compression-tights/tight 7.jpg', '/compression-tights/tight 8.jpg',
+    '/compression-tights/tight-2.jpg', '/compression-tights/tight-5.jpg'
+  ];
 
-  const trainingTopsImages = Array.from({ length: 24 }, (_, i) => {
-    const id = i + 1;
-    // top-1 has no extension
-    return id === 1 ? '/training-tops/top-1' : `/training-tops/top-${id}.jpg`;
-  });
+  const trainingTopsImages = [
+    '/training-tops/top-10.jpg', '/training-tops/top-11.jpg', 
+    '/training-tops/top-22.jpg', '/training-tops/top-24.jpg'
+  ];
 
   const generateCategoryItems = (baseId, category, images, priceRange) => {
     // Mapping plural categories to singular for cleaner names
