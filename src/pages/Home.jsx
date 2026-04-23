@@ -14,7 +14,7 @@ const Home = () => {
       <section className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2670&auto=format&fit=crop"
+            src="/compression-tights/tight-10.jpg"
             alt="Athlete working out"
             className="w-full h-full object-cover opacity-40 mix-blend-overlay"
           />
@@ -90,7 +90,12 @@ const Home = () => {
               >
                 <div className="absolute inset-0">
                   <img
-                    src={`https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000&auto=format&fit=crop`}
+                    src={
+                      category === 'Training Tops' ? '/training-tops/top-2.jpg' :
+                      category === 'Compression Tights' ? '/compression-tights/tight-2.jpg' :
+                      category === 'Sports Bras' ? '/bras/bra-2.jpg' :
+                      '/training-tops/top-2.jpg'
+                    }
                     alt={category}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
